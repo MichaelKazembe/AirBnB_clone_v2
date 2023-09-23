@@ -27,14 +27,14 @@ def hello_hbnb():
 @app.route('/c/<text>', strict_slashes=False)
 def hello_c(text):
     """ Function that displays 'C followed by value of text' """
-    return f'C {text}'
+    return f'C {text.replace("_", " ")}'
 
 
 @app.route('/python/<text>', strict_slashes=False)
 def hello_python(text="is cool"):
     """ Function that displays 'Python followed by value of text' """
-    return f'Python {text}'
+    return f'Python {text.replace("_", " ")}'
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', port=5000)
