@@ -32,8 +32,14 @@ def hello_c(text):
 
 @app.route('/python/<text>', strict_slashes=False)
 def hello_python(text="is cool"):
-    """ Function that displays 'Python followed by value of text' """
+    """ Function that displays 'Python followed by text variable """
     return f'Python {text.replace("_", " ")}'
+
+
+@app.route('/number/<int:n>', strict_slashes=False)
+def hello_number(n):
+    """ Function that displays 'Python followed by text variable """
+    return f'{n} is a number'
 
 
 if __name__ == '__main__':
