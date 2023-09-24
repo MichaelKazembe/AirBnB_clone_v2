@@ -33,6 +33,7 @@ def hello_c(text):
     return f'C {text.replace("_", " ")}'
 
 
+@app.route('/python', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def hello_python(text="is_cool"):
     """ Function that displays 'Python ', followed by the value of the text """
