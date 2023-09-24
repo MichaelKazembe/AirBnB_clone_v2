@@ -25,7 +25,7 @@ def hello_c(text):
     """ Function that displays 'C followed by value of text' """
     return f'C {text.replace("_", " ")}'
 
-
+@app.route('/python/', strict_slashes=False)
 @app.route('/python/<text>', strict_slashes=False)
 def hello_python(text="is cool"):
     """ Function that displays 'Python followed by text variable """
